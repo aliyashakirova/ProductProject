@@ -1,10 +1,10 @@
 ﻿using ProductProject;
 
-var prodgen = new ProductGeneral();
+var prod = new Product();
 
 string nameb = "batchdfsdf";
 double priceb = 33;
-DateTime expdateb = new DateTime(2024, 5, 1, 8, 30, 52);
+DateTime expdateb = new DateTime(2024, 3, 1, 8, 30, 52);
 DateTime prodtimeb = new DateTime(2008, 5, 1, 8, 30, 52);
 int amountb = 13567;
 

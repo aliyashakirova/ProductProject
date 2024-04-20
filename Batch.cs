@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ProductProject
 {
-    public class Batch : ProductGeneral
+    public class Batch : Product
     {
         public int Amount { get; set; }
         public Batch(string name, double price, int am, DateTime prodDate, DateTime ExpDate)
@@ -18,14 +18,17 @@ namespace ProductProject
             Amount = am;
         }
 
-        public override void ProductInfo(ProductGeneral prodgen)
+        public override void ProductInfo(Product product)
         {
             Console.WriteLine($"The batch name is {Name}");
             Console.WriteLine($"The batch price is {Price}");
             Console.WriteLine($"The batch production date is {ProductionDate}");
             Console.WriteLine($"The batch expire date is {ExpireDate}");
             Console.WriteLine($"The amount of batch is {Amount}");
-            IsExpired(prodgen);
+            if (IsExpired(product))
+             Console.WriteLine("The batch is expired."); 
+            else
+            Console.WriteLine("The batch is ok");
         }
 
         //public void BatchOfProducts(Batch batch)
